@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Jurgensmeier family website.">
+  <meta name="theme-color" content="#101c30">
+  <title>The Jurgensmeier Family</title>
+  <style>
+    :root { color-scheme: dark; --navy: #101c30; --navy-deep: #0a1424; --gold: #d9ba7a; --white: #f7f9fc; --muted: #b7c5d8; }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% 35%, #1b304c 0%, var(--navy) 48%, var(--navy-deep) 100%); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; display: flex; flex-direction: column; }
+    header { width: min(1100px, calc(100% - 48px)); margin: 0 auto; padding: 30px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { color: var(--white); text-decoration: none; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.16em; }
+    .brand-mark { color: var(--gold); margin-right: 9px; }
+    .header-label { color: var(--gold); font-size: 0.72rem; letter-spacing: 0.17em; }
+    main { flex: 1; display: grid; place-items: center; padding: 70px 24px 110px; }
+    .welcome { width: min(750px, 100%); text-align: center; }
+    .eyebrow { color: var(--gold); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; line-height: 1.8; }
+    h1 { margin: 22px 0 25px; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: 1.1; letter-spacing: -0.035em; }
+    .rule { width: 64px; height: 2px; background: var(--gold); margin: 0 auto 27px; }
+    .tagline { margin: 0 0 20px; font-size: clamp(1.12rem, 2.5vw, 1.45rem); letter-spacing: 0.025em; }
+    .description { color: var(--muted); font-size: 1.03rem; line-height: 1.85; max-width: 530px; margin: 0 auto; }
+    footer { width: min(1100px, calc(100% - 48px)); margin: 0 auto; border-top: 1px solid rgba(217,186,122,0.18); padding: 24px 0 28px; text-align: center; color: #9aabc2; font-size: 0.78rem; }
+    @media (max-width: 520px) { header { padding-top: 24px; } .brand { font-size: 0.78rem; letter-spacing: 0.11em; } .header-label { font-size: 0.62rem; } main { padding: 65px 22px 90px; } .description { font-size: 0.98rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./" aria-label="Jurgensmeier family homepage"><span class="brand-mark" aria-hidden="true">✦</span>JURGENSMEIER</a>
+    <span class="header-label">OUR FAMILY</span>
+  </header>
+  <main>
+    <section class="welcome" aria-labelledby="welcome-title">
+      <p class="eyebrow">Welcome to our corner of the web</p>
+      <h1 id="welcome-title">The Jurgensmeier Family</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="tagline">Family. Memories. Adventures.</p>
+      <p class="description">A little place on the internet to share our story, celebrate life's moments, and stay connected.</p>
+    </section>
+  </main>
+  <footer>© <span id="year">2026</span> The Jurgensmeier Family. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
